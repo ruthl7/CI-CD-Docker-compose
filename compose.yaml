@@ -1,0 +1,17 @@
+services:
+  json-server:
+    build:
+      dockerfile: Dockerfile.db
+    image: ghcr.io/ruthl7/joke-jsonserver:0.0.2
+      
+    ports:
+      - "3000:80"
+  
+  front-end:
+    build:
+      dockerfile: Dockerfile.front-end
+    image: ghcr.io/ruthl7/joke-frontend:0.0.2
+
+    ports:
+      - "8000:80"
+  
