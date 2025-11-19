@@ -20,8 +20,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
     - uses: actions/checkout@v3
+    - name: Checkout repository
       run: |
         docker compose build
         docker login ghcr.io -u ruthl7 -p ${{ secrets.GHCR_TOKEN }}
